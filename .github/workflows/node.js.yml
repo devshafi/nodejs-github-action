@@ -13,16 +13,16 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [16.x]
+        node-version: [12]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
 
     - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
+    - name: Use Node.js 
       uses: actions/setup-node@v3
       with:
-        node-version: ${{ matrix.node-version }}
+        node-version: 12
         cache: 'npm'
     - run: npm ci
     - name: 'Create env file'
@@ -30,4 +30,4 @@ jobs:
           touch .env
           echo SUPER_SECRET_KEY="123456" >> .env
           cat .env
-    - run: node app
+    - run: npm start
