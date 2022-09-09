@@ -30,6 +30,6 @@ jobs:
           touch .env
           echo SUPER_SECRET_KEY="101010" >> .env
           cat .env
-    - name: 'Restarting the app'
+    - name: 'Restarting the appp'
       run: |    
           pm2 restart "test node app"
