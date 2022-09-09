@@ -28,6 +28,6 @@ jobs:
     - name: 'Create env file'
       run: |
           touch .env
-          echo SUPER_SECRET_KEY="123456" >> .env
+          echo SUPER_SECRET_KEY="101010" >> .env
           cat .env
     - run: npm start
