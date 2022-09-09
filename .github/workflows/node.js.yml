@@ -30,6 +30,4 @@ jobs:
           touch .env
           echo SUPER_SECRET_KEY="101010" >> .env
           cat .env
-          npm start
-      env:
-          CI: true
+          pm2 restart "test node app"
