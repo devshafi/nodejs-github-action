@@ -30,4 +30,4 @@ jobs:
           touch .env
           echo SUPER_SECRET_KEY="101010" >> .env
           cat .env
-    - run: npm start
+          npm start
